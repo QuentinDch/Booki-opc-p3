@@ -26,6 +26,15 @@ html {
   scroll-behavior: smooth;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -261,7 +270,7 @@ body {
   color: var(--main-color);
   border: 1px solid var(--border-color);
   border-radius: calc(Infinity * 1px);
-  padding: 7px 10px;
+  padding: 6px 10px;
 }
 
 /********** Hebergements and Populaires **********/ /********** Hebergements and Populaires **********/
@@ -282,7 +291,7 @@ body {
 }
 
 .card-title {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .euro {
@@ -294,6 +303,7 @@ body {
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
@@ -307,9 +317,40 @@ body {
   box-sizing: border-box;
 }
 
+.hebergements-and-populaires .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.hebergements-and-populaires .card-rating {
+  margin-bottom: 5px;
+}
+
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
+}
+
+.hebergements-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.hebergements-cards .card-content {
+  padding-left: 15px;
+}
+
+.hebergements-cards img {
+  width: 100%;
+  height: 119px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergements-cards .card-subtitle {
+  margin-bottom: 4px;
 }
 
 /****** Populaires ***********/
@@ -325,14 +366,13 @@ body {
 
 .populaires-cards .card {
   display: flex;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 15px 0 0 15px;
 }
 
 .populaires-cards .card-content {
@@ -344,20 +384,18 @@ body {
   box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
-}
-
 .populaires-cards .card-subtitle {
   margin: 0;
 }
 
-.populaires-cards .card-rating {
-  margin-bottom: 5px;
-}
+/****** Hebergements And PopulairesSHOW-MORE ***********/
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+.show-more button {
+  font-weight: bold;
+  font-size: 1.125rem;
+  background: none;
+  cursor: pointer;
+}
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -380,24 +418,90 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-
   .populaires-cards a {
     width: 30%;
   }
 
   .populaires-cards .card-title {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .populaires-cards .card-subtitle {
-    font-size: 13px;
+    font-size: 0.813rem;
+  }
+  .populaires-cards .card {
+    margin-top: 20px;
   }
 }
 
+/****** Media queries ***********/
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+  }
+  .hebergements-and-populaires .populaires,
+  .hebergements-and-populaires .hebergements {
+    border-radius: 0;
+  }
+  .hebergements-and-populaires .hebergements {
+    background: #fff;
+  }
+  .hebergements-cards {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  .populaires {
+    margin-top: 0;
+  }
+  .populaires-cards {
+    flex-direction: column;
+  }
+  .populaires-cards a {
+    width: 100%;
+  }
 }
+
+/********** Activities **********/
+
+.activities {
+  padding: 30px;
+}
+
+.activities-title {
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.activities-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.activities-card {
+  width: 20%;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.activities-card__title {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.activities-card__img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/********** ActivitiesRESPONSIVE **********/
 
 footer {
   padding-top: 35px;
