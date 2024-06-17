@@ -143,7 +143,7 @@ body {
 }
 
 .search-bar .fa-solid.fa-location-dot {
-  padding: 14px 18px;
+  padding: 15px 18px;
   border-radius: 15px 0 0 15px;
   background: var(--main-bg-color);
   color: #000;
@@ -164,7 +164,7 @@ body {
 }
 
 .search-bar button {
-  padding: 0 16px;
+  padding: 0 15px;
   border-radius: 0 15px 15px 0;
   color: #fff;
   background-color: var(--main-color);
@@ -535,6 +535,10 @@ body {
 
 .footer-content li {
   margin: 15px 0;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
 }
 
 .footer-title {
