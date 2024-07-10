@@ -19,4 +19,4 @@ Troisième projet du parcours **"Intégrateur web"** chez OpenClassroom. <br> L'
 
 ## Lien du Site
 
-Vous pouvez visiter le site [Booki](https://quentindch.github.io/opc-p3/) pour voir le résultat final.
+Vous pouvez visiter le site [Booki](https://quentindch.github.io/Booki-opc-p3/) pour voir le résultat final.
